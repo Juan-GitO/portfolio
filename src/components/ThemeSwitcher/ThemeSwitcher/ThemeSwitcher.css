@@ -1,0 +1,23 @@
+.btn {
+  padding: 0.65rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0.5rem;
+  background-color: #491eff;
+  color: #d4dbff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.btn svg {
+  display: block;
+}
+
+.dark .btn {
+  background-color: #7582ff;
+  color: #050617;
+}

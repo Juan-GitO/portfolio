@@ -1,0 +1,42 @@
+.use-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+html.dark .use-card {
+  background-color: #0f172a;
+  border-color: #334155;
+}
+
+.use-card:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.12);
+}
+
+.use-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+html.dark .use-card h3 {
+  color: #f8fafc;
+}
+
+.use-card p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.75;
+}
+
+html.dark .use-card p {
+  color: #cbd5e1;
+}

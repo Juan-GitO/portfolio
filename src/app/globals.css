@@ -2,32 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Dark Mode Support for Theme Switcher */
+html {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html.dark {
+  color-scheme: dark;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Ensure Navbar adapts to dark mode */
+html.dark .navbar {
+  background-color: #1f2937;
+  border-color: #374151;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html.dark .link {
+  color: #e5e7eb;
+}
+
+html.dark .link:hover {
+  text-decoration-color: #38bdf8;
+}
+
+html.dark .link:active {
+  color: #38bdf8;
+}
+
+/* Ensure ProjectCard adapts to dark mode */
+html.dark .project-card {
+  border-color: #374151;
+  background-color: #1f2937;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+html.dark .project-card h2 {
+  color: #f3f4f6;
+}
+
+html.dark .project-card p {
+  color: #9ca3af;
+}
+
+html.dark .project-card a {
+  color: #d1d5db;
+}
+
+html.dark .project-card a:hover {
+  color: #f3f4f6;
+}
+
+/* Ensure SkillsWidget adapts to dark mode */
+html.dark .skills-widget {
+  background-color: transparent;
+}
+
+html.dark .skills-widget h2 {
+  color: #f3f4f6;
+}
+
+html.dark .skills-widget p {
+  color: #9ca3af;
+}
+
+html.dark .skills-item {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+html.dark .skills-item-content h3 {
+  color: #f3f4f6;
+}
+
+/* Ensure WorkWidget adapts to dark mode */
+html.dark .work-widget {
+  background-color: transparent;
+}
+
+html.dark .work-widget h2 {
+  color: #f3f4f6;
+}
+
+html.dark .work-widget p {
+  color: #9ca3af;
+}
+
+html.dark .work-item {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+html.dark .work-item-content h3 {
+  color: #f3f4f6;
+}
+
+html.dark .work-item-content-details p {
+  color: #9ca3af;
+}
+
+html.dark .work-item-content-details span {
+  color: #6b7280;
+}
+
+/* Ensure Footer adapts to dark mode */
+html.dark .footer {
+  background-color: #0f172a;
+  border-top-color: #1e293b;
+}
+
+html.dark .footer a {
+  color: #e5e7eb;
+}
+
+html.dark .footer p {
+  color: #9ca3af;
 }
